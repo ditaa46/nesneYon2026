@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #0f172a;
+  color: #00ffcc;
+}
+
+.desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.window {
+  box-shadow: 0 0 20px rgba(0,255,200,0.3);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 500px;
+  background: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.title-bar {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  color: red;
+  font-size: 14px;
+}
+
+#output {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#input {
+  width: 100%;
+  padding: 5px;
+  background: black;
+  border: none;
+  color: #00ffcc;
+}
+
+.icon {
+  cursor: pointer;
+  margin: 10px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  background: black;
+  color: #00ffcc;
+}
+
+#photoList img {
+  width: 120px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}

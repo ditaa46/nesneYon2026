@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dita OS (Nesne dersi)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop">
+
+  <!-- ICON -->
+  <div class="icon" onclick="openApp('terminal')">🖥 Terminal</div>
+  <div class="icon" onclick="openApp('editor')">📄 Editor</div>
+  <div class="icon" onclick="openApp('photos')">📁 Photos</div>
+
+  <!-- TERMINAL -->
+  <div class="window hidden" id="terminalWindow">
+    <div class="title-bar">
+        Terminal
+        <span class="close-btn" onclick="closeApp('terminal')">❌</span>
+    </div>
+    <div id="output"></div>
+    <input id="input" placeholder="Komut yaz..." />
+  </div>
+
+  <!-- EDITOR -->
+  <div class="window hidden" id="editorWindow">
+    <div class="title-bar">
+        Editor (program.tr)
+        <span class="close-btn" onclick="closeApp('editor')">❌</span>
+    </div>
+    <textarea id="editor"></textarea>
+    <button onclick="saveFile()">Save</button>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="window hidden" id="photosWindow">
+    <div class="title-bar">
+      📁 /photos/
+      <span class="close-btn" onclick="closeApp('photos')">❌</span>
+    </div>
+    <div id="photoList"></div>
+  </div>
+
+  <!-- VIEWER WINDOW -->
+  <div class="window hidden" id="viewerWindow">
+    <div class="title-bar">
+      Viewer
+      <span class="close-btn" onclick="closeViewer()">❌</span>
+    </div>
+    <img id="viewerImg" style="width:100%">
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
